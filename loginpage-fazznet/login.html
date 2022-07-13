@@ -9,22 +9,6 @@
 </head>
 
 <body>
-	<script>
-		var error = "$(error)";
-		if (error == "invalid username or password") {
-			window.location.href = "wrong.html";
-		} else if (error == "already authorizing, retry later") {
-			window.location.href = "loading.html";
-		} else if (error == "user $(username) has reached uptime limit") {
-			window.location.href = "uptime.html";
-		} else if (error == "user $(username) has reached traffic limit") {
-			window.location.href = "traffic.html";
-		} else if (error == "user $(username) is not allowed to log in from this MAC address") {
-			window.location.href = "random.html";
-		} else if (error == "no more sessions are allowed for user $(username)") {
-			window.location.href = "dhcp.html";
-		}
-	</script>
 	<div class="interface1">
 		<div class="div1">
 			<img src="fazznet.png" alt="fazznet">
@@ -49,6 +33,22 @@
 			password.value = user;
 		}
 		username.onkeyup = setpass;
+	</script>
+	<script>
+		var error = "$(error)";
+		if (error == "invalid username or password") {
+			window.location.href = "wrong.html";
+		} else if (error == "already authorizing, retry later") {
+			window.location.href = "loading.html";
+		} else if (error == "user $(username) has reached uptime limit") {
+			window.location.href = "uptime.html";
+		} else if (error == "user $(username) has reached traffic limit") {
+			window.location.href = "traffic.html";
+		} else if (error == "user $(username) is not allowed to log in from this MAC address") {
+			window.location.href = "random.html";
+		} else if (error == "no more sessions are allowed for user $(username)") {
+			window.location.href = "dhcp.html";
+		}
 	</script>
 </body>
 
