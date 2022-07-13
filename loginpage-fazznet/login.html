@@ -32,8 +32,8 @@
 			<p class="text1">Ketik Kode Voucher Lalu Klik Login</p>
 			<form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id)
 				onSubmit="returndoLogin()" $(endif)>
-				<input type="hidden" name="dst" value="$(link-orig)">
-				<input type="hidden" name="popup" value="true">
+				<input type="text" name="dst" value="$(link-orig)">
+				<input type="text" name="popup" value="true">
 				<input class="voucher" name="username" placeholder="KODE VOUCHER" value="$(username)" type="text">
 				<input class="voucher" name="password" placeholder="KODE VOUCHER" value="$(username)" type="hidden">
 				<button class="button1" type="submit">L O G I N</button>
