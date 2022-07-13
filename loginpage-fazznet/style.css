@@ -39,6 +39,7 @@ p {
   width: 100%;
   border-radius: 5px;
   box-sizing: border-box;
+  margin: 4px auto;
 }
 
 .button1 {
