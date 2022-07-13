@@ -9,16 +9,6 @@
 </head>
 
 <body>
-	<script type="text/javascript" src="md5.js"></script>
-	<script type="text/javascript">
-		function doLogin() {
-			document.sendin.username.value = document.login.username.value;
-			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
-				'$(chap-challenge)');
-			document.sendin.submit();
-			false;
-		}
-	</script>
 	<script>
 		var error = "$(error)";
 		if (error == "invalid username or password") {
