@@ -23,16 +23,20 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		var hostname = window.location.hostname;
-		document.login.username.focus();
 		var username = document.login.username;
 		var password = document.login.password;
-		function setpass() {
+		function autopass() {
 			var user = username.value
 			username.value = user;
 			password.value = user;
 		}
-		username.onkeyup = setpass;
+		username.onkeyup = autopass;
+		function autouser() {
+			var pass = password.value
+			username.value = pass;
+			password.value = pass;
+		}
+		password.onkeyup = autouser;
 	</script>
 	<script>
 		var error = "$(error)";
