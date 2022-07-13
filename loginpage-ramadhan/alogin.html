@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>LDNET.ID > redirect</title>
+<meta http-equiv="refresh" content="2; url=$(link-redirect)">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<link rel="stylesheet" href="css/style.css">
+<script language="JavaScript">
+<!--
+    function startClock() {
+        $(if popup == 'true')
+        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+	$(endif)
+	location.href = './status';
+    }
+//-->
+</script>
+<style type="text/css">
+
+
+.main-wrapper{
+  height:100%;
+  width:100%;
+  position:relative;
+}
+
+.loading{
+  width:60px;
+  overflow:hidden;
+  height:100%;
+  margin: auto;
+ position:relative;
+}
+
+.loading img{
+  width:60px;
+  top:40%;
+  position:absolute;
+}
+</style>
+</head>
+<body onLoad="startClock()">
+<div class="main-wrapper">
+  <div class="loading">
+<img src="img/load.svg"/>
+  </div>
+</div>
+<script type="text/javascript">
+	document.getElementById('title').innerHTML = window.location.hostname + " > redirect";
+</script>
+</body>
+</html>
+

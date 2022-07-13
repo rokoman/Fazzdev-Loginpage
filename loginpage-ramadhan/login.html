@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="img/wfi.png" type="image/x-icon">
+        <link rel="icon" href="img/wfi.png" type="image/x-icon">
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/splide.min.css">
+    
+        <!-- ===== BOX ICONS ===== -->
+        <script src="js/jquery.min2.1.3.js" type="text/javascript"></script>
+        <link href='js/manifest.json' rel='manifest'/>
+        <link rel="stylesheet" href="css/swiper.min.css">
+
+        <title>FAZZNET | LOGIN</title>
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24451557-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+      </head>
+      <body>
+        <div class="login">
+                <div class="login__forms">
+                      <div class="gambartop">
+                      <div class="logo bmh-80 bg-white text-center"><img src="img/logo.png" alt="Desa Digital" style="border-radius: 1px; width:100%; max-width: 360px; height:auto;"/></div>
+                      </div>
+                    <form action="" class="login__registre" id="login-in">
+                      $(if chap-id)
+
+                  <div  class="tab tab-active" data-id="tab1">
+                  <form name="sendin" action="$(link-login-only)" method="post">
+                  <input type="hidden" name="username" />
+                  <input type="hidden" name="password" />
+                  <input type="hidden" name="dst" value="$(link-orig)" />
+                  <input type="hidden" name="popup" value="true" />
+                  </form>
+                  <script type="text/javascript" src="/md5.js"></script>
+                  <script type="text/javascript">
+                    <!--
+                        function doLogin() {
+                      document.sendin.username.value = document.login.username.value;
+                      document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+                      document.sendin.submit();
+                      return false;
+                        }
+                    //-->
+                    </script>
+                  $(endif)
+                  <div align="center">
+                  <a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)"></a>
+                  </div>
+                  <input id="tab-menu-html" type="radio" name="tab-menu" checked="checked" />
+                  <input id="tab-menu-css" type="radio" name="tab-menu" />
+                  <div class="tab-label">
+                  <label for="tab-menu-html"><b>VOUCHER</b></label>
+                  <label for="tab-menu-css"><b>MEMBER</b></label>
+                  </div>
+                  <div class="tab-content html">
+                  <div class="isi2">
+                  <div class="notinpt">
+                  <p>masukan kode <b>VOUCHER</b> anda disini</p>
+                  </div>
+                  <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)/>
+                  <input type="hidden" name="dst" value="$(link-orig)" />
+                  <input type="hidden" name="popup" value="true" />
+                  <input name="username" id="username" type="text" value="$(username)" placeholder="Kode Voucher" onkeyup="change();"/>
+                  <input name="password" type="hidden" id="password"/>
+                  <div class="butonbox"> 
+                  <input type="submit" class="login__button" value="LOGIN" />
+                  </div>
+                  $(if error)<br />
+                  <div class="errornotif" >$(error)</div>$(endif)
+                  </form>
+                  <div class="textslid1">
+                  <div id="slider">
+                  <ul class="slides">
+                  <li class="slide slide1"><b>Pilih signal terbaik dari lokasi Anda</b></li>
+                  <li class="slide slide2"><b>Cek masa aktif ketik fazznet.com/status</b></li>
+                  <li class="slide slide3"><b>Untuk login member klik menu member</b></li>
+                  <li class="slide slide4"><b>Gunakan voucher untuk akses sesuai kebutuhan</b></li>
+                  </ul>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="tab-content css">
+                  <div class="isi2">
+                  <div class="notinpt">
+                  <p>masukan ID <b>MEMBER</b> anda disini</p>
+                  </div>
+                  <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)/>
+                  <input type="hidden" name="dst" value="$(link-orig)" />
+                  <input type="hidden" name="popup" value="true" />
+                  <input name="username" id="" type="text" value="$(username)" placeholder="ID Member"/>
+                  <input name="password" type="password" id="nganu" placeholder="Password"/>
+                  <div class="butonbox">
+                  <input type="submit" class="login__button" value="LOGIN" />  
+                  </div>
+                  $(if error)<br />
+                  <div class="errornotif" >$(error)</div>$(endif)
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+                                            <section class="slider">
+                          <div id="image-slider" class="splide">
+                            <div class="splide__track">
+                              <ul class="splide__list">
+                                <li class="splide__slide">
+                                  <a href="#ad1"><img src="assets/img1.jpg"></a>
+                                </li>
+                                <li class="splide__slide">
+                                  <a href="#ad2"><img src="assets/img2.jpg"></a>
+                                </li>
+                                <li class="splide__slide">
+                                  <a href="#ad3"><img src="assets/img3.jpg"></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </section>
+                  <div class="texslider">
+                  <div class="item-1">
+                  <p class="lari1">VOUCHER TERSEDIA DI :</p>
+                  <span class="lari2"><b>FAZZNET</b></span>
+                  </div>
+                  <div class="item-2">
+                  <p class="lari1">1.000 • 10 JAM | 2.000 • 1 HARI</p>
+                  <span class="lari2">UNLIMITED TANPA BATASAN KUOTA</span>
+                   </div>
+                  <div class="item-3">
+                  <p class="lari1">14.000 • 7 HARI | 35.000 • 30 HARI</p>
+                  <span class="lari2">UNLIMITED TANPA BATASAN KUOTA</span>
+                   </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="btmnavbar"> 
+                  <header class="header">
+                      <a href="" class="logo"><img src="img/wfi.png"/></a>
+                      <input class="menu-btn" type="checkbox" id="menu-btn" />
+                      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                  <ul class="menu">
+                      <li><a href="login.html"><img src="icon/2.png"/> Home</a></li>
+                      <li><a href="fitur.html"><img src="icon/3.png"/> Fitur</a></li>
+                      <li><a href="voucher.html"><img src="icon/4.png"/> Harga</a></li>
+                      <li><a href="bantuan.html"><img src="icon/5.png"/> Bantuan</a></li>
+                      <li><a href="kontak.html"><img src="icon/6.png"/> Kontak</a></li>
+                  </ul>
+                    </header>
+                  </div>
+                  <script type="text/javascript">
+                    document.login.username.focus();
+                  </script>
+
+                  <script type="text/javascript">
+                  var width = 100;
+                  var animation_speed = 700;
+                  var time_val = 3000;
+                  var current_slide = 1;
+                  var $slider = $('#slider');
+                  var $slide_container = $('.slides');
+                  var $slides = $('.slide');
+                  var interval;
+                  $slides.each(function(index){
+                    $(this).css('left',(index*100)+'%');
+                  });
+                  function startSlider() {
+                    interval = setInterval(function() {
+                      $slide_container.animate({'left': '-='+(width+'%')}, animation_speed, function() {
+                        if (++current_slide === $slides.length) {
+                          current_slide = 1;
+                          $slide_container.css('left', 0);
+                        }
+                      });
+                    }, time_val);
+                  }
+                  startSlider();
+                  </script>
+                  <script type="text/javascript">
+                          window.jssor_1_slider_init = function() {
+
+                              var jssor_1_SlideshowTransitions = [
+                                {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+                                {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+                              ];
+
+                              var jssor_1_options = {
+                                $AutoPlay: 1,
+                                $SlideshowOptions: {
+                                  $Class: $JssorSlideshowRunner$,
+                                  $Transitions: jssor_1_SlideshowTransitions,
+                                  $TransitionsOrder: 1
+                                },
+                                $ArrowNavigatorOptions: {
+                                  $Class: $JssorArrowNavigator$
+                                },
+                                $ThumbnailNavigatorOptions: {
+                                  $Class: $JssorThumbnailNavigator$,
+                                  $Orientation: 2,
+                                  $NoDrag: true
+                                }
+                              };
+
+                              var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                              /*#region responsive code begin*/
+
+                              var MAX_WIDTH = 980;
+
+                              function ScaleSlider() {
+                                  var containerElement = jssor_1_slider.$Elmt.parentNode;
+                                  var containerWidth = containerElement.clientWidth;
+
+                                  if (containerWidth) {
+
+                                      var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                                      jssor_1_slider.$ScaleWidth(expectedWidth);
+                                  }
+                                  else {
+                                      window.setTimeout(ScaleSlider, 3000);
+                                  }
+                              }
+
+                              ScaleSlider();
+
+                              $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                              $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                              $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                              /*#endregion responsive code end*/
+                          };
+                          
+                          $(document).ready(function(){ 
+                      $('.tab-a').click(function(){  
+                        $(".tab").removeClass('tab-active');
+                        $(".tab[data-id='"+$(this).attr('data-id')+"']").addClass("tab-active");
+                        $(".tab-a").removeClass('active-a');
+                        $(this).parent().find(".tab-a").addClass('active-a');
+                       });
+                  });
+                      </script>
+                      <script src="js/jssor.slider.js" type="text/javascript"></script>
+                      <script type="text/javascript">jssor_1_slider_init();
+                      </script>
+                    <!-- #endregion Jssor Slider End -->
+                      <!-- Additional Script -->
+                        <script type="text/javascript">
+                        var input1 = document.getElementById('username');
+                        var input2 = document.getElementById('password');
+                        var updateInputs = function () {
+                        input2.value = input1.value;
+                        }
+                        if (input1.addEventListener) {
+                        input1.addEventListener('keyup', function () {
+                        updateInputs();
+                        });
+                        } else if (input1.attachEvent) { // support IE
+                        input1.attachEvent('onkeyup', function () {
+                        updateInputs();
+                        });
+                        }
+                        </script>
+                      <script type="text/javascript">load();</script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/splide.min.js"></script>
+        <script src="assets/js/splide.custom.js"></script>
+    </body>
+</html>

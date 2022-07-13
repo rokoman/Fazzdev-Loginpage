@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>INDIHOME</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="theme-color" content="#3B5998" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="md5.js"></script>
+	<script type="text/javascript">
+		function doLogin() {
+			document.sendin.username.value = document.login.username.value;
+			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
+				'$(chap-challenge)');
+			document.sendin.submit();
+			false;
+		}
+	</script>
+	<script>
+		var error = "$(error)";
+		if (error == "invalid username or password") {
+			window.location.href = "./wrong.html";
+		} else if (error == "already authorizing, retry later") {
+			window.location.href = "./loading.html";
+		} else if (error == "user $(username) has reached uptime limit") {
+			window.location.href = "./uptime.html";
+		} else if (error == "user $(username) has reached traffic limit") {
+			window.location.href = "./traffic.html";
+		} else if (error == "user $(username) is not allowed to log in from this MAC address") {
+			window.location.href = "./random.html";
+		} else if (error == "no more sessions are allowed for user $(username)") {
+			window.location.href = "./dhcp.html";
+		}
+	</script>
+	<div class="indihome">
+		<br><
+		<img src="brand.png" width="100%">
+		<br><br><br><br>
+		<div class="notice" id="infologin"></div>
+		<form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+			onSubmit="return doLogin()" $(endif)>
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+			<input class="username" name="username" type="text" value="$(username)" />
+			<input class="password" name="password" placeholder="Password" type="hidden" />
+			<button class="button1" type="submit">O K</button>
+		</form>
+		<br>
+	</div>
+	<script type="text/javascript">
+		var hostname = window.location.hostname;
+		document.login.username.focus();
+		var infologin = document.getElementById('infologin');
+		infologin.innerHTML = "Masukkan Password";
+		// login page 2 mode by Laksamadi Guko
+		var username = document.login.username;
+		var password = document.login.password;
+		username.placeholder = "P A S S W O R D";
+		// set password = username
+		function setpass() {
+			var user = username.value
+			//user = user.toUpperCase();
+			username.value = user;
+			password.value = user;
+		}
+		username.onkeyup = setpass;
+		// change to voucher mode
+		function voucher() {
+			username.focus();
+			username.onkeyup = setpass;
+			username.placeholder = "P A S S W O R D";
+			password.type = "hidden";
+			infologin.innerHTML = "Masukkan Password";
+		}
+		// change to member mode
+		function member() {
+			username.focus();
+			username.onkeyup = "";
+			username.placeholder = "P A S S W O R D";
+			password.type = "hidden";
+			infologin.innerHTML = "Masukkan Password";
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+# This file contains error messages which are shown to user, when http/https
+# login is used.
+# These messages can be changed to make user interface more friendly, including
+# translations to different languages.
+#
+# Various variables can be used here as well. Most frequently used ones are:
+#	$(error-orig)	- original error message from hotspot
+#	$(ip)		- ip address of a client
+#	$(username)	- username of client trying to log in
+
+# internal-error
+# It should never happen. If it will, error page will be shown
+# displaying this error message (error-orig will describe what has happened)
+
+internal-error = internal error ($(error-orig))
+
+# config-error
+# Should never happen if hotspot is configured properly.
+
+config-error = configuration error ($(error-orig))
+

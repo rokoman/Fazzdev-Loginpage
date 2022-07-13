@@ -1,0 +1,90 @@
+body {
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  padding: 4px;
+  margin: auto;
+}
+
+.interface1 {
+  background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff);
+  background-size: 500%;
+  width: 95%;
+  max-width: 410px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: auto;
+  animation: animation1 1s linear infinite alternate;
+}
+
+.div1 {
+  background-color: white;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.voucher {
+  font-weight: bold;
+  text-align: center;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.button1 {
+  background-color: purple;
+  font-weight: bold;
+  color: white;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 4px auto 0px;
+  cursor: pointer;
+}
+
+.button1:hover {
+  font-size: 16px;
+  color: yellow;
+}
+
+.button1:active {
+  font-size: 16px;
+  color: red;
+}
+
+.text1 {
+  font-size: 12px;
+}
+
+.text2 {
+  font-size: 16px;
+}
+
+.text3 {
+  font-size: 31px;
+}
+
+.text4 {
+  font-size: 100px;
+  color: red;
+}
+
+@keyframes animation1 {
+  from {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+  }
+}

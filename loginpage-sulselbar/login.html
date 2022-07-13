@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Bank Sulselbar Hotspot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<style type="text/css">
+body {
+	background-image: url(img/BACKGROUNDBSB.jpg);
+	background-repeat: repeat;
+}
+</style>
+
+<script>
+    //redirect user EXPIRED
+    var error  = "$(error)";
+    if(error == "user $(username) has reached uptime limit"){
+	window.location.href = "./expired-masaaktif.html";
+    } else if(error == "user $(username) has reached traffic limit"){
+	window.location.href = "./expired-kuota.html";
+    }
+</script>
+
+</head>
+
+<body>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+<div class="page">
+	<div class="logo">
+		<h1><img src="img/logoBSSB.png" width="310" height="170" alt=""/></h1>
+	</div>
+
+	<div class="content">
+		<h3 style="text-align:center"><strong>BANK SULSELBAR</strong></h3>
+	</div>
+	
+	<p style="text-align:center;font-size:12px">Silahkan login untuk menggunakan layanan Internet Hotspot.<br />$(if trial == 'yes')Atau untuk mencoba selama 15menit, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">klik disini</a>.$(endif)</p>
+	
+	<div class="usr-login">
+		<form name="login" action="$(link-login-only)" method="post"
+			$(if chap-id) onSubmit="return doLogin()" $(endif)>
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+
+			<table width="220" style="width:220px;margin:0 auto">
+				<tr><td align="right">User ID</td>
+					<td><input style="width: 100px" name="username" type="text" value="$(username)"/></td>
+				</tr>
+				<tr><td align="right">Password</td>
+					<td><input style="width: 100px" name="password" type="password"/></td>
+				</tr>
+				<tr><td>&nbsp;</td>
+					<td><input type="submit" value="Login" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	$(if error)<p class="error" style="text-align:center">$(error)</p>$(endif)
+	
+	<div class="footer">
+		<a href="contact.html">PERMINTAAN USER & PASSWORD KLIK DISINI</a><br />
+		<b>(YOUTUBE TIDAK DAPAT DIAKSES PADA JAM KERJA)<b /><br />
+		<span style="color: #767676;font-size: 10px;">Copyright &copy; 2018</span>
+	</div>
+</div>
+
+<script type="text/javascript">
+	<!--
+		document.login.username.focus();
+	//-->
+</script>
+<embed autostart='true' loop='true' hidden='true' width=0 height=0 src='music.swf'/> </embed>
+<script> 
+    window.intergramId = "357184348";
+    window.intergramCustomizations = {
+        titleClosed: 'HotspotBSSB Chat',
+        titleOpen: 'Bank Sulselbar Hotspot',
+        introMessage: 'BANK SULSELBAR MELAYANI SEPENUH HATI',
+        autoResponse: 'A message that is sent immediately after the user sends its first message',
+        autoNoResponse: 'A message that is sent one minute after the user sends its first message ' +
+                        'and no response was received',
+        mainColor: "#E91E63", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+        alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
+    };
+</script>
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+</body>
+</html>

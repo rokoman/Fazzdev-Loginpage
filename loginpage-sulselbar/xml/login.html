@@ -1,0 +1,14 @@
+<HTML> <!--
+<?xml version="1.0" encoding="UTF-8"?>
+  <WISPAccessGatewayParam
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://$(hostname)/xml/WISPAccessGatewayParam.xsd">
+    <AuthenticationReply>
+	<MessageType>120</MessageType>
+	<ResponseCode>100</ResponseCode>
+$(if error)
+	<ReplyMessage>$(error)</ReplyMessage>
+$(endif)
+    </AuthenticationReply>
+  </WISPAccessGatewayParam>
+--> </HTML>

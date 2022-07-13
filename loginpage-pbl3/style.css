@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, -apple-system, BlinkMacSystemFont, Verdana, Roboto, sans-serif;
+  background: black;
+}
+
+marquee {
+  background-color: black;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  background-color: white;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+table td,
+table th {
+  padding: 4px;
+  border: 1px solid #000;
+}
+
+.main {
+  background-image: linear-gradient(#ff0000, #ffff00, #00ff00, #00ffff, #0000ff);
+  color: black;
+  width: 95%;
+  max-width: 410px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.button1 {
+  background-color: green;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button2 {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 32%;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.username,
+.password {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 98%;
+  color: black;
+  font-weight: bold;
+}
+
+.text {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.notice {
+  font-size: 19px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.indihome {
+  background: white;
+  color: black;
+  width: 95%;
+  max-width: 410px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>$(identity) - Logout</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script language="JavaScript">
+        <!-- function openLogin() {
+        if (window.name != 'hotspot_logout') return true;
+        open('$(link-login)', '_blank', '');
+        window.close();
+        return false;
+        }
+        //-->
+    </script>
+    <script language="JavaScript">
+        function readablizeBytes(bytes) {
+            var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+            var e = Math.floor(Math.log(bytes) / Math.log(1024));
+            return (bytes / Math.pow(1024, Math.floor(e))).toFixed(2) + " " + s[e];
+        }
+    </script>
+	
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Trial</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                	
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Login</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Paket</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Kontak</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Tentang</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form validate-form">
+					<span class="login100-form-title">
+						<img style="width:95%" src="images/header.png"/>
+						<hr style="margin-top: 15px">
+	                    <p style="font-size:17px;font-weight: bold;color:aqua;margin-top: 18px">Anda Telah Logout !!!</p>
+					</span>
+					<br>
+                        <table class="table table-striped" style="font-size: 14px">
+                            <tbody>
+                                <tr>
+                                    <td>ID Hotspot</td>
+                                    <td>$(username)</td>
+                                </tr>
+                                <tr>
+                                    <td>IP Address</td>
+                                    <td>$(ip)</td>
+                                </tr>
+                                $(if session-time-left)
+                                <tr>
+                                    <td>Sisa Waktu</td>
+                                    <td>$(session-time-left)</td>
+                                </tr>
+                                $(else)
+                                <tr>
+                                    <td>Sisa Quota</td>
+                                    <td>$(remain-bytes-total-nice)</td>
+                                </tr>
+                                $(endif)
+                                <tr>
+                                    <td>Terhubung</td>
+                                    <td>$(uptime)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-sm-12">
+                            	<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+	                                <div style="width:100%;" class="form-group">
+	                                	<hr style="margin-top: -15px;margin-bottom: 5px">
+	                                    <button href="login.html" style="width:100%;height:40px;padding-left:15px;padding-right:15px;" class="btn btn-primary btn-block2">Login Kembali</button>
+	                                    <hr>
+	                                    <p style="text-align: center;">Terima kasih sudah menggunakan internet bersama $(identity).</p>                             
+	                                </div>
+	                            </form>
+                            </div>
+                        </div>
+
+					<div class="text-center p-t-136">
+						<hr style="margin-top: -10px">
+						<a class="txt2" href="https://topsetting.com/">
+							2019 &copy; Copyright TOPSETTING.COM
+						</a>
+					</div>						
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

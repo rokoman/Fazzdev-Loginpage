@@ -1,0 +1,9 @@
+<script>
+    //redirect user EXPIRED
+    var error  = "$(error)";
+    if(error == "user $(username) has reached uptime limit"){
+	window.location.href = "./expired-masaaktif.html";
+    } else if(error == "user $(username) has reached traffic limit"){
+	window.location.href = "./expired-kuota.html";
+    }
+</script>

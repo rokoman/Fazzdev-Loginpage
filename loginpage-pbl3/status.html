@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FAZZNET</title>
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <br>
+                    <div class="notice">SELAMAT DATANG</div>
+                    <div class="notice">$(username)</div>
+                    <br>
+                    <div class="notice">ANDA SUDAH LOGIN</div>
+                    <div class="notice">WIFI SIAP DIGUNAKAN</div>
+                    <br>
+                    <div class="notice">ANDA TELAH MEMAKAI</div>
+                    <div class="notice"><font id="hasil" color="red"></font> GB PADA BULAN INI</div>
+                    <br>
+                    <div class="notice">HUBUNGI KAMI</div>
+                    <div class="notice">
+                        <a href="tel:+6285222228090">0852-2222-8090</a>
+                    </div>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <button class="button1" onclick="window.location='info.html';">WIFI LEMOT - KLIK DI SINI</button>
+    </div>
+    <script>
+        var a = 100000000000 - $(remain-bytes-total);
+        var b = (a) / 1000000000;
+        var c = document.getElementById("hasil");
+        c.innerHTML = Math.ceil(b)
+    </script>
+</body>
+
+</html>

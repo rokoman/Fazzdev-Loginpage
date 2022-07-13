@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Bank Sulselbar HotSpot=&gt;status</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<style type="text/css">
+<!--
+textarea, input, select {
+	background-color: #FDFBFB;
+	border: 1px #BBBBBB solid;
+	padding: 2px;
+	margin: 1px;
+	font-size: 14px;
+	color: #808080;
+}
+
+.tabula{
+ 
+border-width: 1px; 
+border-collapse: collapse; 
+border-color: #c1c1c1; 
+background-color: transparent;
+font-family: verdana;
+font-size: 11px;
+}
+
+body{ color: #737373; font-size: 12px; font-family: verdana; }
+
+a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 12px; }
+a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+img {border: none;}
+td { font-size: 12px; padding: 4px;}
+
+-->
+</style>
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</head>
+<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+<table width="100%" height="100%">
+
+<tr>
+<td align="center" valign="middle">
+<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+<table border="1" class="tabula">
+<font color="#008080"><b><span style="font-size: 11pt">$(if login-by == 'trial')
+	<br><div style="text-align: center;">Welcome trial user!</div><br>
+$(elif login-by != 'mac')
+	<br><div style="text-align: center;">Welcome $(username)!</div><br>
+$(endif) </span></b></font>
+	<tr><td align="right">
+      <p style="margin: -2" align="center"><font color="#008080"><b>
+      <span style="font-size: 11pt">IP address:</span></b></font></td><td>
+      <font color="#008080">$(ip)</font></td></tr>
+	<tr><td align="right">
+      <p style="margin: -2" align="center"><font color="#008080"><b>
+      <span style="font-size: 11pt">bytes up/down:</span></b></font></td><td>
+      <font color="#008080">$(bytes-in-nice) / $(bytes-out-nice)</font></td></tr>
+<font color="#008080">$(if session-time-left) </font>
+	<tr><td align="right">
+      <p style="margin: -2" align="center"><font color="#008080"><b>
+      <span style="font-size: 11pt">connected / left:</span></b></font></td><td>
+      <font color="#008080">$(uptime) / $(session-time-left)</font></td></tr>
+<font color="#008080">$(else) </font>
+	<tr><td align="right">
+      <p style="margin: -2" align="center"><font color="#008080"><b>
+      <span style="font-size: 11pt">connected:</span></b></font></td><td>
+      <font color="#008080">$(uptime)</font></td></tr>
+<font color="#008080">$(endif)
+$(if blocked == 'yes') </font>
+	<tr><td align="right">
+      <p style="margin: -2" align="center"><font color="#008080"><b>
+      <span style="font-size: 11pt">status:</span></b></font></td><td><div style="color: #FF8080">
+<a href="$(link-advert)" target="hotspot_advert"><font color="#008080">advertisement</font></a><font color="#008080"> required</font></div></td>
+      <font color="#008080">$(elif refresh-timeout) </font>
+	<tr><td align="right">
+      <p style="margin: -2" align="center"><font color="#008080"><b>
+      <span style="font-size: 11pt">status refresh:</span></b></font></td><td>
+      <font color="#008080">$(refresh-timeout)</font></td>
+      <font color="#008080">$(endif) </font>
+
+</table>
+<b><font color="#008080">$(if login-by-mac != 'yes')
+<br>
+<!-- user manager link -->
+</font></b>
+<input type="submit" value="log off">
+$(endif)</b></font><p style="margin: -2" align="center">
+          <img border="0" src="img/logosinggasana.JPG" width="66" height="37">
+          <img border="0" src="img/lintasarta.JPG" width="188" height="38"></form>
+
+<!-- user-manager data form -->
+<form name="slform" action="http://$(hostname)/user" method="post">
+ <input type="hidden" name="subs" value="" />
+</form>
+<!-- end of user-manager data form -->
+<script> 
+    window.intergramId = "357184348";
+    window.intergramCustomizations = {
+        titleClosed: 'HotspotBSSB Chat',
+        titleOpen: 'Bank Sulselbar Hotspot',
+        introMessage: 'BANK SULSELBAR MELAYANI SEPENUH HATI',
+        autoResponse: 'A message that is sent immediately after the user sends its first message',
+        autoNoResponse: 'A message that is sent one minute after the user sends its first message ' +
+                        'and no response was received',
+        mainColor: "#E91E63", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+        alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
+    };
+</script>
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+
+</td>
+</table>
+</body>
+</html>

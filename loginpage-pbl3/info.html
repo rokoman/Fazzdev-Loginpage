@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FAZZNET</title>
+    <title id="title"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+         <table>
+             <tr>
+                 <td colspan="2">
+                     <div class="text">MASA AKTIF WIFI <a id="user">$(username)</a> BERAKHIR PADA</div>
+                     <iframe id="exp" height="25px" width="160px" frameborder="0" scrolling="no"></iframe>
+                     <div class="text">BAYARLAH SEBELUM MASA AKTIF HABIS</div>
+                 </td>
+             </tr>
+             <tr>
+                 <td>User Online</td>
+                 <td>
+                     <script src="active.js"></script> Orang
+                 </td>
+             </tr>
+             <tr>
+                 <td>Waktu Digunakan</td>
+                 <td>$(uptime)</td>
+             </tr>
+             <tr>
+                 <td>IP Address</td>
+                 <td>$(ip)/24</td>
+             </tr>
+             <tr>
+                 <td>MAC Address</td>
+                 <td>$(mac)</td>
+             </tr>
+         </table>
+         <table>
+             <tr>
+                 <td colspan="3">
+                     <div class="text">CARA MENGATASI WIFI YANG LEMOT</div>
+                     <div class="text">Baguskan Sinyal Dan Restart Antena</div>
+                     <div class="text">Hentikan Dowload Dan Matikan Update</div>
+                     <div class="text">Upgrade Paket Dengan Yang Lebih Cepat</div>
+                     <div class="text">Berikut Adalah Daftar Paket Wifi Bulanan</div>
+                 </td>
+             </tr>
+             <tr>
+                 <th>KECEPATAN</th>
+                 <th>BANDWIDHT</th>
+                 <th>HARGANYA</th>
+             </tr>
+             <tr>
+                 <td>Standart</td>
+                 <td>3 Mbps</td>
+                 <td>30.000</td>
+             </tr>
+             <tr>
+                 <td>Cepat</td>
+                 <td>4 Mbps</td>
+                 <td>40.000</td>
+             </tr>
+             <tr>
+                 <td>Ngebut</td>
+                 <td>5 Mbps</td>
+                 <td>50.000</td>
+             </tr>
+         </table>
+         <button class="button1" onclick="window.location='logout.html';">LOGOUT WIFI - KLIK DI SINI</button>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('title').innerHTML = window.location.hostname + " > status";
+        //get vaidity
+        var usr = document.getElementById('user').innerHTML
+        var url =
+            "http://mikhmon.fazznet.mra.my.id/status/status.php?name="; //http://ip-server-mikhmon/mikhmonv2/status/status.php?name=
+        var SessionName = "Jorongan1"
+        var getvalid = url + usr + "&session=" + SessionName
+        document.getElementById('exp').src = getvalid;
+    </script>
+</body>
+
+</html>

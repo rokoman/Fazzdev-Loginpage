@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FAZZNET.COM - Tentang</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                $(if login-by)  	
+	                    <li>
+	                        <a style="margin-top: 0" href="status.html">
+	                            <b>Status</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="logout?erase-cookie=true">
+	                            <b>Logout</b>
+	                        </a>
+	                    </li>
+	                $(else)
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Trial</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                
+	                    <li>
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Login</b>
+	                        </a>
+	                    </li>
+	                $(endif) 
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Paket</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Kontak</b>
+	                        </a>
+	                    </li>
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Tentang</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100 package">
+			<div class="wrap-login100 ">
+				<div style="width: 600px" class="login100-form">
+					<span class="login100-form-title">
+						<i class="fa fa-info-circle" aria-hidden="true"></i> Tentang $(identity)
+						<hr style="margin-top: 15px">                                
+                                <p style="text-align:justify;">
+                                    Merupakan sebuah Penyedia Layanan Internet Hotspot Murah Unlimited Data dengan berbagai macam pilihan paket internet dan harga yang terjangkau, beralamatkan di <i><u>Gg Jeruk, Rowo Indah, Kabupaten Jember, Jawa Timur</u></i>.</p>
+                                <p style="text-align:justify;">
+                                    Kami juga menyediakan Pulsa, Token Listrik, Top Up Game, Susu Kedele dengan harga super murah meriah
+                                </p>
+                                <br>
+                                <p style="text-align:left;color:green;margin-bottom: 10px">Susu Kedelai</p>
+                                <ul style="text-align:justify;font-family: 'Source Sans Pro';font-size: 16px">
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Rasa Original </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Rasa Coklat </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Rasa Melon</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Rasa Strowbery </li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Rasa Nanas</li>
+                                </ul>
+                                <br>    
+                                <p style="text-align:left;color:green;margin-bottom: 10px">Sedia Pulsa dan Token</p>
+                                <p style="text-align:justify;">
+                                    Kami juga menjual Pulsa dan Paket Data dari berbagai macam Operator GSM serta menjual Token Listrik PLN dengan harga yang bersahabat.
+                                </p>
+                                <ul style="text-align:justify;font-family: 'Source Sans Pro';font-size: 16px;margin-top: 10px">
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Telkomsel</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Indosat</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Axis</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Tri</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Token Listrik</li>
+                                </ul>                                
+					</span>	
+					<div class="text-center p-t-136">
+						<hr>
+						<a class="txt2" href="https://topsetting.com/">
+							2020 &copy; FAZZNET.COM
+						</a>
+					</div>											
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

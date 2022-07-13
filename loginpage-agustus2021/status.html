@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Status</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script type="text/javascript">
+		setInterval( function () {
+			$('#terhubung').load('reload/uptime.html').fadeIn("fast");
+		}, 1000);
+		
+		setInterval( function () {
+			$('#session').load('reload/session.html').fadeIn("fast");
+		}, 1000);
+
+		setInterval( function () {
+			$('#quota').load('reload/quota.html').fadeIn("fast");
+		}, 1000);		
+	</script>    
+    <script language="JavaScript">
+        function openLogout() {
+            if (window.name != 'hotspot_status') return true;
+            open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+            window.close();
+            return false;
+        }
+        //-->
+    </script>
+    <script language="JavaScript">
+        function readablizeBytes(bytes) {
+            var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+            var e = Math.floor(Math.log(bytes) / Math.log(1024));
+            return (bytes / Math.pow(1024, Math.floor(e))).toFixed(2) + " " + s[e];
+        }
+    </script>
+
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                 $(if login-by)  	
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="status.html">
+	                            <b>Status</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="logout?erase-cookie=true">
+	                            <b>Logout</b>
+	                        </a>
+	                    </li>
+	                $(else)
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Trial</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Login</b>
+	                        </a>
+	                    </li>
+	                $(endif)    	                
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Paket</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Kontak</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Tentang</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100 package">
+			<div class="wrap-login100">
+				<div class="login100-form validate-form">
+					<span class="login100-form-title">
+						<img style="width:95%" src="images/header.png"/>
+						<hr style="margin-top: 15px">
+	                    <p style="font-size:17px;font-weight: bold;color:aqua;margin-top: 18px">Selamat Datang $(username)</p>
+					</span>
+					<br>
+                    <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+                        <table class="table table-striped" style="font-size: 14px">
+                            <tbody>
+                                <tr>
+                                    <td>ID Hotspot</td>
+                                    <td>$(username)</td>
+                                </tr>
+                                <tr>
+                                    <td>IP Address</td>
+                                    <td>$(ip)</td>
+                                </tr>
+                                $(if session-time-left)
+                                <tr>
+                                    <td>Sisa Waktu</td>
+                                    <td id="session">$(session-time-left)</td>
+                                </tr>
+                                $(else)
+                                <tr>
+                                    <td>Sisa Quota</td>
+                                    <td id="quota">$(remain-bytes-total-nice)</td>
+                                </tr>
+                                $(endif)
+                                <tr>
+                                    <td>Terhubung</td>
+                                    <td id="terhubung">$(uptime)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       <div style="margin-top: -20px" class="row">
+                            <div class="col-sm-12">
+                                <div style="width:100%;" class="form-group">
+                                    <hr>
+                                    <p style="text-align: center;font-weight: bold;text-decoration: underline;">Situs Favorit</p>
+                                    <div style="margin-top: 10px" class="row">
+										<center><a href="https://www.facebook.com/" title="Facebook - Masuk Atau Daftar" target="_blank" rel="noopener"><img style="width:25%" alt="facebook" src="images/facebook-sites.png"></a>
+										<a href="https://twitter.com/login?lang=id" title="Masuk Ke Twitter" target="_blank" rel="noopener"><img style="width:25%" alt="twitter" src="images/twitter-sites.png"></a>
+										<a href="https://www.youtube.com/" title="Beranda Youtube" target="_blank" rel="noopener"><img style="width:25%" alt="youtube" src="images/youtube-sites.png"></a></center>
+									</div>
+									<br>
+									<div style="margin-bottom: -20px" class="row">
+										<center><a href="https://accounts.google.com/AccountChooser?service=mail&continue=https://mail.google.com/mail/" title="Masuk Ke Gmail" target="_blank" rel="noopener"><img style="width:25%" alt="gmail" src="images/gmail-sites.png"></a>
+										<a href=https://wa.me/message/ZWMKCLXQW6BSG1 target="_blank" rel="noopener"><img style="width:25%" alt="yahoomail" src="images/yahoo-sites.png"></a>
+										<a href="https://www.instagram.com/?hl=id" title="Instagram" target="_blank" rel="noopener"><img style="width:25%" alt="instagram" src="images/instagram-sites.png"></a></center> 
+									</div>
+                                    <button style="width:100%;height:40px;padding-left:15px;padding-right:15px;margin-top: 40px;margin-bottom: -15px" type="submit" class="btn btn-primary btn-block2">Logout Hotspot</button>									                                 
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+					<div class="text-center p-t-136">
+						<hr style="margin-top: -10px">
+						<a class="txt2" href="https://topsetting.com/">
+							2020 &copy; Fazznet.com
+						</a>
+					</div>						
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+	<script src="chat.js"></script>
+</body>
+</html>

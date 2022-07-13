@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FAZZNET | STATUS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="img/wfi.png" type="image/x-icon">
+        <link rel="icon" href="img/wfi.png" type="image/x-icon">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="expires" content="-1">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <!-- ===== JS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <script src="js/swiper.min.js"></script>
+
+
+          <!-- Untuk Chrome & Opera -->
+          <meta name="theme-color" content="#0064d3"/>
+          <!-- Untuk Windows Phone -->
+          <meta name="msapplication-navbutton-color" content="#0064d3"/>
+          <!-- Untuk Safari iOS -->
+          <meta name="apple-mobile-web-app-status-bar-style" content="#0064d3"/>
+
+
+          $(if refresh-timeout)
+          <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+          $(endif)
+
+          <script language="JavaScript">
+          <!--
+          $(if advert-pending == 'yes')
+              var popup = '';
+              function focusAdvert() {
+            if (window.focus) popup.focus();
+              }
+              function openAdvert() {
+            popup = open('$(link-advert)', 'hotspot_advert', '');
+            setTimeout("focusAdvert()", 1000);
+              }
+          $(endif)
+              function openLogout() {
+            if (window.name != 'hotspot_status') return true;
+                  open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+            window.close();
+            return false;
+              }
+          //-->
+          </script>
+    </head>
+    <body>
+        <div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <img src="assets/img/status.jpg" alt="">
+                </div>
+                <div class="login__forms">
+                    <form action="" class="login__registre" id="login-in">
+                    <div class="rbox">
+                    <h2>Username : $(username)</h2>
+                    <a> Sisa waktu : $(session-time-left)</a>
+                         <div class="tbltatus">
+<td align="center" valign="middle">
+<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+<table border="1" class="tabula">
+<tr><td>IP address</td><td>$(ip)</td>
+</tr>
+<tr><td>Upload</td><td>$(bytes-in-nice)</td>
+</tr>
+<tr><td>Download</td><td>$(bytes-out-nice)</td>
+</tr>
+$(if session-time-left)
+<tr><td>Sisa Waktu</td><td>$(session-time-left)</td>
+</tr>
+$(else)
+<tr><td>Tersambung</td><td>$(uptime)</td>
+</tr>
+$(endif)
+$(if blocked == 'yes')
+<tr><td>Status:</td><td><div style="color: #FF8080">
+<a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</div></td>
+</tr>
+$(elif refresh-timeout)
+<tr><td> Status refresh</td><td>$(refresh-timeout)</td>
+</tr>
+$(endif)
+</table>
+<span style="display:none;">$(if login-by-mac != 'yes')</span>
+<br>
+<!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+<button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+<!-- end of user manager link -->
+<div class="ucul">
+<a href="logout.html"><span> Logout</span></a>
+$(endif)
+</div>
+
+
+</td>
+
+</form>
+
+</td>
+</div>
+</div>
+                    </form>
+
+                    <form action="" class="login__create none" id="login-up">
+                         <h1 class="login__title">Login Member</h1>
+                          <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)/>
+                          <input type="hidden" name="dst" value="$(link-orig)" />
+                          <input type="hidden" name="popup" value="true" />
+    
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input name="username" id="" class="login__input" type="text" value="$(username)" placeholder="ID Member"/>
+                        </div>
+    
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input name="password" type="password" id="nganu" class="login__input" placeholder="Password"/>
+                        </div>
+
+                          <input type="submit" class="login__button" value="LOGIN" />
+
+                        <div>
+                            <span class="login__account">Login Voucher</span>
+                            <span class="login__signup" id="sign-in">Klik Disini</span>
+                        </div></br>
+
+                        <div class="textslid1">
+                        <div id="slider">
+                        <ul class="slides">
+                        <li class="slide slide1"><b>| Pilih signal Wifi terbaik di lokasi anda |</b></li>
+                        <li class="slide slide2"><b>| Perhatikan Huruf Besar/Kecil |</b></li>
+                        <li class="slide slide3"><b>| Gunakan Internet sesuai kebutuhan |</b></li>
+                        <li class="slide slide4"><b>| FAZZNET |</b></li>
+                        </ul>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              </div>
+              </div>
+              </div>
+                  <div class="btmnavbar"> 
+                  <header class="header">
+                      <a href="" class="logo"><img src="img/wfi.png"/></a>
+                      <input class="menu-btn" type="checkbox" id="menu-btn" />
+                      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                  <ul class="menu">
+                      <li><a href="login.html"><img src="icon/2.png"/> Home</a></li>
+                      <li><a href="fitur.html"><img src="icon/3.png"/> Fitur</a></li>
+                      <li><a href="voucher.html"><img src="icon/4.png"/> Harga</a></li>
+                      <li><a href="bantuan.html"><img src="icon/5.png"/> Bantuan</a></li>
+                      <li><a href="kontak.html"><img src="icon/6.png"/> Kontak</a></li>
+                  </ul>
+                    </header>
+                  </div>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Login member</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    $(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+      <div class="container h-100 d-flex align-items-center justify-content-between">
+        <!-- Back Button-->
+        <div class="back-button"><a href="index.html"><i class="lni lni-arrow-left"></i></a></div>
+        <!-- Page Title-->
+        <div class="page-heading">
+          <h6 class="mb-0">Login member</h6>
+        </div>
+        
+    <!-- Navbar Toggler-->
+        <div class="suha-navbar-toggler d-flex justify-content-between flex-wrap" ><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <!-- Page Content Wrapper-->
+   <div class="page-content-wrapper">
+      <div class="container">
+        <div class="checkout-wrapper-area py-3">
+          <div class="credit-card-info-wrapper">
+            <div class="pay-credit-card-form"><br>         
+                <div class="mb-3">
+                  <form name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+<label for="paypalEmail">Kode voucher</label>
+                  <input class="form-control" type="text"  name="username" value="$(username)"  placeholder="Masukan kode Voucher"><small class="ml-1">Tidak punya voucher dan pasword?<a class="ml-1" href="login">klik disini</a></small>
+                </div>
+                <div class="mb-3">
+                  <label for="paypalPassword">Password</label>
+                  <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <button class="btn btn-primary btn-lg w-100" type="submit">Verifikasi</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   	<!-- untuk script js -->
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+
+		<!-- script -->
+  
+  </body>
+</html>

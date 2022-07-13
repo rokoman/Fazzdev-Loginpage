@@ -1,0 +1,112 @@
+body {
+	background: url("../images/bg-dekstop.png") center top no-repeat,
+				url("../images/bg.png") repeat;
+	font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+.container {
+	max-width: 720px;
+	margin: 40px auto;
+	padding: 15px 0 15px;
+	background: #e2e2e2;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.header {
+	margin: 15px auto;
+}
+
+.login {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #1a82f7; 
+	background-image: url(images/fallback-gradient.png); 
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#c2c2c2), to(#797979));
+	background-image: -webkit-linear-gradient(top, #c2c2c2, #797979); 
+	background-image:    -moz-linear-gradient(top, #c2c2c2, #797979);
+	background-image:     -ms-linear-gradient(top, #c2c2c2, #797979);
+	background-image:      -o-linear-gradient(top, #c2c2c2, #797979);
+}
+
+p.title{
+	text-align: center;
+	margin: 0 0 15px 0;
+	padding: 7px 0;
+	font-size: 14px;
+	font-family: verdana, arial;
+	font-weight: bold;
+	color: #888;
+	display: block;
+	clear: both;
+	border-bottom: 3px solid #969696;
+	width: 100%;
+}
+
+label {
+	color: #fff;
+	font-weight: normal;
+}
+
+.form-control {
+	padding-left: 35px;
+}
+
+.input-icon {
+	float: left;
+	color: orange;
+	margin: -25px 0 0 10px;
+}
+
+.submit{
+	background: url("../images/bgbtn-dekstop.png") no-repeat center;
+	position: relative;
+	text-align: center;
+	margin: 0 17px;
+}
+
+input[type="submit"].connect {
+	background: url("../images/btn-connect.png") no-repeat;
+	border: none;
+	width: 143px;
+	height: 27px;
+	position: relative;
+	top: 2px;
+}
+
+.nav-bottom {
+	margin-top: 15px;
+	font-size: 12px;
+	color: #cccccc;
+}
+
+.nav-bottom a {
+	color: #cccccc;
+	margin: auto 7px;
+}
+
+.nav-bottom a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+@media (max-width: 767px) {
+	body {
+		background: url("../images/bg-mobile.png") center top no-repeat,
+					url("../images/bg.png") repeat;
+	}
+	.container {
+		margin: 20px 15px;
+	}
+}
+
+@media (min-width: 480px) {
+	.logo div {
+		padding: 0 70px;
+	}
+}

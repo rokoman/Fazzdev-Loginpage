@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FAZZNET.COM - Kontak</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                $(if login-by)  	
+	                    <li>
+	                        <a style="margin-top: 0" href="status.html">
+	                            <b>Status</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="logout?erase-cookie=true">
+	                            <b>Logout</b>
+	                        </a>
+	                    </li>
+	                $(else)
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Trial</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                
+	                    <li>
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Login</b>
+	                        </a>
+	                    </li>
+	                $(endif) 
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Paket</b>
+	                        </a>
+	                    </li>
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Kontak</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Tentang</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form">
+					<span class="login100-form-title">
+						<i class="fa fa-address-book" aria-hidden="true"></i> Kontak dan Alamat
+						<hr style="margin-top: 15px">
+                        <p style="text-align:justify;">
+                            Jika anda mempunyai pertanyaan, permasalahan seputar login hotspot atau ingin mengetahui informasi lebih lanjut silahkan hubungi kami di nomor kontak atau alamat dibawah ini :</p>
+                        <hr>
+                        <p style="text-align:justify;">
+                        	KANTOR FAZZNET<br>
+                        	Gg Jeruk, Rowo Indah, Kabupaten Jember, Jawa Timur
+                        </p>                        
+                        <p style="text-align:justify;margin:20px auto;font-size:17px;color:#337ab7;" >
+                            <i class="fa fa-user" aria-hidden="true"></i> Mobile : 0812 1732 1288<br>
+                            <i class="fa fa-user" aria-hidden="true"></i> Mobile : 0812 1732 1288<br>
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp : 0812 1732 1288
+                        </p> 
+					</span>
+					<div class="text-center p-t-136">
+						<hr>
+						<a class="txt2" href="https://topsetting.com/">
+							2020 &copy; FAZZNET.COM
+						</a>
+					</div>											
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

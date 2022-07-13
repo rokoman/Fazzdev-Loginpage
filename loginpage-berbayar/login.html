@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Fazznet</title> 
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body> 	
+	$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+    </div>
+    <div class="header-area" id="headerArea">
+      <div class="container h-100 d-flex align-items-center justify-content-between">
+        <!-- Logo Wrapper-->
+        <div class="logo-wrapper"><h6 class="mb-0">FAZZNET</h6></div> 
+           <div class="single-settings d-flex align-items-center justify-content-between">
+                <div class="title"><i class="lni lni-night"></i><span></span></div>
+                <div class="data-content">
+                  <div class="toggle-button-cover">
+                    <div class="button r">
+                      <input class="checkbox" id="ganti" type="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+           </div>
+    </div>     
+    <!-- PWA Alert-->
+    <div class="toast pwa-install-alert shadow" id="pwaInstallToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="8000" data-autohide="true">
+      <div class="toast-body">
+        <button class="ml-3 close" type="button" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="content d-flex align-items-center mb-2"><img src="img/logo.png" alt="">
+          <h6 class="mb-0 text-white">Fazznet</h6>
+        </div><span class="mb-0 d-block text-white">Selamat datang di Fazznet <strong class="mx-1">Silahkan login </strong>silahkan gunakan voucher atau klik member untu anda pengguna voucher dan password.</span>
+      </div>
+    </div>
+    <div class="page-content-wrapper">
+      <!-- Hero Slides-->
+      <div class="hero-slides owl-carousel">
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide" style="background-image: url('img/slid1.gif')">
+          <div class="slide-content h-100 d-flex align-items-center">
+            <div class="container">
+              <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-wow-duration="1000ms">Marhaban Ya Ramadhan</h4>
+              <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-wow-duration="1000ms">Ngabuburit sebentar lagi, tenang Fazznet temani kamu sampai waktu berbuka puasa tiba. </p><a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-wow-duration="1000ms">Beli Voucher</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single  Slide-->
+        <div class="single-hero-slide" style="background-image: url('img/slid2.jpg')">
+          <div class="slide-content h-100 d-flex align-items-center">
+            <div class="container">
+              <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-wow-duration="1000ms">Beli voucher pakai Telegram</h4>
+              <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-wow-duration="1000ms">Kami melayani pembelian secara otomatis melalui Telegram, coba sekarang </p><a class="btn btn-success btn-sm" href="https://t.me/wififazznet_bot" data-animation="fadeInUp" data-delay="500ms" data-wow-duration="1000ms">Beli voucher</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Slide-->
+        <div class="single-hero-slide" style="background-image: url('img/slid3.jpg')">
+          <div class="slide-content h-100 d-flex align-items-center">
+            <div class="container">
+              <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-wow-duration="1000ms">Promosi </h4>
+              <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-wow-duration="1000ms">halaman promosi lain nya</p><a class="btn btn-danger btn-sm" href="#" data-animation="fadeInUp" data-delay="800ms" data-wow-duration="1000ms">Info lengkap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-catagories-wrapper py-2">
+        <div class="container">
+          <div class="section-heading">               
+              <div class="apply-coupon">
+                <h6 class="mb-0">Punya voucher?</h6>
+                <p class="mb-2">Silahkan masukan voucher anda disini!</p>
+                <div class=" mb-3 coupon-form ">
+                 <form name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+                    <input class="form-control" id="username" name="username" type="text" placeholder="Masukan kode voucher" value="$(username)" />
+<input id="password" name="password" type="hidden"/>
+                    <button class="btn btn-primary" type="submit">Login</button>
+                  </form>
+                </div>
+<center><p class="mb-2" style="color:red">$(if error) $(error) $(endif)</center></p>
+          </div>
+          <div class="product-catagory-wrap">
+            <div class="row g-3">
+              <div class="col-4">
+                <div class=" catagory-card">
+                  <div class="card-body">$(if trial == 'yes')	<a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">$(endif)<i class="lni lni-consulting"></i><span>Gratis</span></a></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="catagory-card">
+                  <div class="card-body"><a href="member.html"><i class="lni lni-lock"></i><span>Member</span></a></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="car catagory-card">
+                  <div class="card-body"><a onclick="window.location='https://laksa19.github.io/myqr';"><i class="lni lni-grid-alt "></i><span>Barcode</span></a></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="catagory-card">
+                  <div class="card-body"><a href="privacy-policy.html"><i class="lni lni-protection"></i><span>Privacy</span></a></div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="catagory-card">
+                  <div class="card-body"><a href="promo.html"><i class="lni lni-alarm "></i><span>Promo</span></a></div>
+                </div>  
+               </div>
+              <div class="col-4">
+                <div class="catagory-card">
+                  <div class="card-body"><a href="tel: 08884088452"><span class="icon-color-orange"><i class="lni lni-phone"></i><span>Call center</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flash-sale-wrapper">
+        <div class="container">
+          <div class="section-heading d-flex align-items-center justify-content-between">
+            <h6 class="ml-1">Harga Voucher Fazznet</h6><a class="btn btn-primary btn-sm" href="#">Bantuan</a>
+          </div>
+          <!-- Flash Sale Slide-->
+          <div class="flash-sale-slide owl-carousel">
+            <!-- Single Flash Sale Card-->
+            <div class="card flash-sale-card">
+              <div class="card-body"><img src="img/vcr.png" alt=""><span class="product-title">Paket 10 jam</span>
+                  <p class="sale-price">Rp 1.000<span class="real-price"></span></p><span class="progress-title">Unlimited kuota</span>
+                  </div>
+            </div>
+            <!-- Single Flash Sale Card-->
+            <div class="card flash-sale-card">
+              <div class="card-body"><img src="img/vcr.png" alt=""><span class="product-title">Paket 24 jam</span>
+                  <p class="sale-price">Rp 2.000<span class="real-price"></span></p><span class="progress-title">Unlimited kuota</span>
+                  </div>
+            </div>
+            <!-- Single Flash Sale Card-->
+            <div class="card flash-sale-card">
+              <div class="card-body"><img src="img/vcr.png" alt=""><span class="product-title">Paket 1 Minggu</span>
+                  <p class="sale-price">Rp 14.000<span class="real-price"></span></p><span class="progress-title">Unlimited kuota</span>
+                  </div>
+            </div>
+            <!-- Single Flash Sale Card-->
+            <div class="card flash-sale-card">
+              <div class="card-body"><img src="img/vcr.png" alt=""><span class="product-title">Paket 1 Bulan</span>
+                  <p class="sale-price">Rp 35.000<span class="real-price"></span></p><span class="progress-title">Unlimited kuota</span>
+                  </div>
+            </div>
+            <!-- Single Flash Sale Card-->
+            <div class="card flash-sale-card">
+              <div class="card-body"><img src="img/vcr.png" alt=""><span class="product-title">Paket Rumahan</span>
+                  <p class="sale-price">Rp 100.000<span class="real-price"></span></p><span class="progress-title">Unlimited kuota</span>
+                  </a></div>
+            </div>
+            <!-- Single Flash Sale Card-->
+            <div class="card flash-sale-card">
+              <div class="card-body"><img src="img/vcr.png" alt=""><span class="product-title">Paket Rumahan</span>
+                  <p class="sale-price">Rp 100.000<span class="real-price"></span></p><span class="progress-title">Unlimited kuota</span>
+                  </div>
+            </div>
+          </div>
+        </div>
+                </div>
+              </div>  
+ <!-- Internet Connection Status-->
+    <div class="internet-connection-status" id="internetStatus"></div>
+
+<!--Start of Tawk.to Script-->
+
+
+
+<!--End of Tawk.to Script-->
+
+
+
+	<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+  <!-- Additional Script -->
+  <script type="text/javascript">
+	var input1 = document.getElementById('username');
+	var input2 = document.getElementById('password');
+	var updateInputs = function () {
+	input2.value = input1.value;
+	}
+	if (input1.addEventListener) {
+	input1.addEventListener('keyup', function () {
+	updateInputs();
+	});
+	} else if (input1.attachEvent) { // support IE
+	input1.attachEvent('onkeyup', function () {
+	updateInputs();
+	});
+	}
+	</script> 
+ <!-- All JavaScript Files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/default/ganti.js"></script>
+    <script src="js/default/no-internet.js"></script>
+    <script src="js/default/active.js"></script>
+  </body>
+</html>
