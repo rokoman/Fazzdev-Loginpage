@@ -22,7 +22,7 @@
             <p class="text2">" $(username) "</p>
             <br>
             <p class="text2">Anda Telah Menggunakan</p>
-            <span class="text4" id="hasil"></span>
+            <span class="text4" id="usage"></span>
             <span class="text4">GB</span>
             <p class="text2">Terhitung Sejak Awal Bulan</p>
             <br>
@@ -30,8 +30,8 @@
         <button class="button1" onclick="window.location='https://wa.me/6285222228090';">HUBUNGI KAMI - KLIK DI SINI</button>
     </div>
     <script>
-        var x = document.getElementById("hasil");
-        x.innerHTML = Math.ceil(100 - $(remain-bytes-total) / 1000000000)
+        var usage = document.getElementById("usage");
+        usage.innerHTML = Math.ceil(100 - $(remain-bytes-total) / 1000000000)
     </script>
 </body>
 
