@@ -9,21 +9,28 @@
 </head>
 
 <body>
-	<form name="sendin" action="$(link-login-only)" method="post">
-		<input type="hidden" name="username" />
-		<input type="hidden" name="password" />
-		<input type="hidden" name="dst" value="$(link-orig)" />
-		<input type="hidden" name="popup" value="true" />
-	</form>
-	<script type="text/javascript" src="md5.js"></script>
+	<div class="interface1">
+		<div class="div1">
+			<img src="fazznet.png" alt="fazznet">
+			<br><br><br><br><br>
+			<p class="text1">Ketik Kode Voucher Lalu Klik Login</p>
+			<form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+				onSubmit="returndoLogin()" $(endif)>
+				<input class="voucher" name="username" placeholder="username" type="text">
+				<input class="voucher" name="password" placeholder="password" type="hidden">
+				<button class="button1" type="submit">L O G I N</button>
+			</form>
+		</div>
+	</div>
 	<script type="text/javascript">
-		function doLogin() {
-			document.sendin.username.value = document.login.username.value;
-			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
-				'$(chap-challenge)');
-			document.sendin.submit();
-			false;
+		var username = document.login.username;
+		var password = document.login.password;
+		function autopass() {
+			var user = username.value
+			username.value = user;
+			password.value = user;
 		}
+		username.onkeyup = autopass;
 	</script>
 	<script>
 		var error = "$(error)";
@@ -40,33 +47,6 @@
 		} else if (error == "no more sessions are allowed for user $(username)") {
 			window.location.href = "dhcp.html";
 		}
-	</script>
-	<div class="interface1">
-		<div class="div1">
-			<img src="fazznet.png" alt="fazznet">
-			<br><br><br><br><br>
-			<p class="text1">Ketik Kode Voucher Lalu Klik Login</p>
-			<form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id)
-				onSubmit="returndoLogin()" $(endif)>
-				<input type="hidden" name="dst" value="$(link-orig)">
-				<input type="hidden" name="popup" value="true">
-				<input class="voucher" name="username" placeholder="KODE VOUCHER" value="$(username)" type="text">
-				<input class="voucher" name="password" placeholder="KODE VOUCHER" value="$(username)" type="hidden">
-				<button class="button1" type="submit">L O G I N</button>
-			</form>
-		</div>
-	</div>
-	<script type="text/javascript">
-		var hostname = window.location.hostname;
-		document.login.username.focus();
-		var username = document.login.username;
-		var password = document.login.password;
-		function setpass() {
-			var user = username.value
-			username.value = user;
-			password.value = user;
-		}
-		username.onkeyup = setpass;
 	</script>
 </body>
 

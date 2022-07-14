@@ -10,8 +10,7 @@ img {
 }
 
 p {
-  padding: 4px;
-  margin: auto;
+  margin: 4px auto;
 }
 
 .interface1 {
@@ -39,6 +38,7 @@ p {
   width: 100%;
   border-radius: 5px;
   box-sizing: border-box;
+  margin: 4px auto;
 }
 
 .button1 {
