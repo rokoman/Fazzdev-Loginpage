@@ -53,12 +53,24 @@ p {
   cursor: pointer;
 }
 
-.button1:hover {
+.button2 {
+  background-color: purple;
+  font-weight: bold;
+  color: white;
+  height: 35px;
+  width: 49%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 4px auto 0px;
+  cursor: pointer;
+}
+
+.button1:hover, .button2:hover {
   font-size: 16px;
   color: yellow;
 }
 
-.button1:active {
+.button1:active, .button2:active {
   font-size: 16px;
   color: red;
 }
