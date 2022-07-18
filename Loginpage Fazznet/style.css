@@ -80,8 +80,9 @@ p {
   color: yellow;
 }
 
-.usage {
+.pakai {
   font-size: 100px;
+  font-weight: bold;
   color: red;
 }
 

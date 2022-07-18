@@ -21,19 +21,17 @@
             <p>" $(username) "</p>
             <br>
             <p>Anda Telah Menggunakan</p>
-            <p>
-                <span class="usage" id="usage"></span>
-                <span class="usage">GB</span>
-            </p>
+            <span class="pakai" id="usage"></span>
+            <span class="pakai">GB</span>
             <p>Terhitung Sejak Awal Bulan</p>
             <br>
         </div>
-        <button class="button2" onclick="window.location='https://linktr.ee/fazznet';">CONTACT</button>
+        <button class="button2" onclick="window.location='https://wa.me/6285222228090';">WHATSAPP</button>
         <button class="button2" onclick="window.location='logout.html';">LOGOUT</button>
     </div>
     <script>
         var usage = document.getElementById("usage");
-        usage.innerHTML = Math.ceil(100 - $(remain - bytes - total) / 1000000000)
+        usage.innerHTML = Math.ceil(100 - $(remain-bytes-total) / 1000000000)
     </script>
 </body>
 
