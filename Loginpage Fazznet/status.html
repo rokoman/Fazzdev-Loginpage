@@ -12,19 +12,20 @@
 <body>
     <div class="container1">
         <div class="div1">
+            <h1>LOGIN BERHASIL</h1>
             <br>
-            <p class="text3">LOGIN BERHASIL</p>
+            <p>Anda Telah Berhasil Login</p>
+            <p>Wifi Sudah Bisa Digunakan</p>
             <br>
-            <p class="text2">Anda Telah Berhasil Login</p>
-            <p class="text2">Wifi Sudah Bisa Digunakan</p>
+            <p>SELAMAT DATANG</p>
+            <p>" $(username) "</p>
             <br>
-            <p class="text2">SELAMAT DATANG</p>
-            <p class="text2">" $(username) "</p>
-            <br>
-            <p class="text2">Anda Telah Menggunakan</p>
-            <span class="text4" id="usage"></span>
-            <span class="text4">GB</span>
-            <p class="text2">Terhitung Sejak Awal Bulan</p>
+            <p>Anda Telah Menggunakan</p>
+            <p>
+                <span class="usage" id="usage"></span>
+                <span class="usage">GB</span>
+            </p>
+            <p>Terhitung Sejak Awal Bulan</p>
             <br>
         </div>
         <button class="button2" onclick="window.location='https://linktr.ee/fazznet';">CONTACT</button>
@@ -32,7 +33,7 @@
     </div>
     <script>
         var usage = document.getElementById("usage");
-        usage.innerHTML = Math.ceil(100 - $(remain-bytes-total) / 1000000000)
+        usage.innerHTML = Math.ceil(100 - $(remain - bytes - total) / 1000000000)
     </script>
 </body>
 

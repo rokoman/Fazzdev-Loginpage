@@ -1,7 +1,6 @@
 body {
   background: black;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -11,6 +10,7 @@ img {
 }
 
 p {
+  font-weight: bold;
   margin: 4px auto;
 }
 
@@ -54,18 +54,6 @@ p {
   cursor: pointer;
 }
 
-.button2 {
-  background-color: purple;
-  font-weight: bold;
-  color: white;
-  height: 35px;
-  width: 49%;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin: 4px auto 0px;
-  cursor: pointer;
-}
-
 .button1:hover {
   font-size: 16px;
   color: yellow;
@@ -92,27 +80,9 @@ p {
   color: yellow;
 }
 
-.text1 {
-  font-size: 12px;
-}
-
-.text2 {
-  font-size: 16px;
-}
-
-.text3 {
-  font-size: 31px;
-}
-
-.text4 {
+.usage {
   font-size: 100px;
   color: red;
-}
-
-.bayar {
-  display: inline-block;
-  padding: 4px 4px 0px 4px;
-  margin: 4px;
 }
 
 @keyframes animation1 {
