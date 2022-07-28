@@ -36,6 +36,16 @@ p {
   border-radius: 5px;
 }
 
+.brand {
+  font-size: 3em;
+  color: white;
+  text-shadow: 0 0 10px black,
+  0 0 20px aqua,
+  0 0 30px aqua,
+  0 0 40px aqua,
+  0 0 50px aqua
+}
+
 .voucher {
   font-weight: bold;
   text-align: center;
@@ -94,6 +104,7 @@ p {
   from {
     background-position: right;
   }
+
   to {
     background-position: left;
   }
