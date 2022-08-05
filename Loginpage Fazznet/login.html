@@ -13,8 +13,15 @@
 		<div class="div1">
 			<br>
 			<h1 class="brand">$(identity)</h1>
-			<br><br><br><br><br>
-			<p class="text1">Ketik Kode Voucher Lalu Klik Login</p>
+			<div class="iklan">
+				<div class="merah">
+					<p>Kami Keluarga Besar<br>Fazznet Indonesia Mengucapkan</p>
+				</div>
+				<div class="putih">
+					<p>Dirgahayu Republik Indonesia<br>17 Agustus 2022</p>
+				</div>
+			</div>
+			<p>Ketik Kode Voucher Lalu Klik Login</p>
 			<form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="returndoLogin()" $(endif)>
 				<input class="voucher" name="username" placeholder="username" type="text" autofocus>
 				<input class="voucher" name="password" placeholder="password" type="hidden">

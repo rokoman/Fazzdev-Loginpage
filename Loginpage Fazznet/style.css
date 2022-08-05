@@ -2,47 +2,75 @@ body {
   background: black;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-}
-
-img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-h1 {
-  margin: auto;
-}
-
-p {
   font-weight: bold;
-  margin: 4px auto;
 }
 
 .container1 {
   background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff);
   background-size: 500%;
-  width: 95%;
-  max-width: 410px;
+  width: 99%;
+  max-width: 400px;
   border-radius: 5px;
-  padding: 4px;
+  padding: 2px;
   margin: auto;
   animation: animation1 1s linear infinite alternate;
 }
 
 .div1 {
   background-color: white;
+  background-image: linear-gradient(to bottom, red 25%, White 75%);
   padding: 4px;
   border: 1px solid black;
   border-radius: 5px;
 }
 
+h1 {
+  margin: auto;
+  font-size: 30px;
+}
+
 .brand {
-  font-size: 2.3em;
-  text-shadow: 0 0 10px black,
-  0 0 20px aqua,
-  0 0 30px aqua,
-  0 0 40px aqua,
-  0 0 50px aqua
+  font-size: 35px;
+  color: red;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white, 0 0 90px white;
+  margin: 8px auto;
+}
+
+p {
+  font-size: 15px;
+  margin: 4px auto;
+}
+
+.iklan {
+  width: 99%;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 50px auto;
+  font-size: 15px;
+}
+
+.merah {
+  background-color: red;
+  color: white;
+  height: 100px;
+  display: flex;
+}
+
+.merah p {
+  margin: auto;
+}
+
+.putih {
+  background-color: white;
+  color: red;
+  height: 100px;
+  display: flex;
+}
+
+.putih p {
+  margin: auto;
 }
 
 .voucher {
@@ -55,10 +83,10 @@ p {
   margin: 4px auto;
 }
 
-.button1 {
-  background-color: purple;
+button {
+  background-image: linear-gradient(to bottom, red 25%, White 75%);
   font-weight: bold;
-  color: white;
+  color: black;
   height: 35px;
   width: 100%;
   border-radius: 5px;
@@ -67,44 +95,32 @@ p {
   cursor: pointer;
 }
 
-.button1:hover {
-  font-size: 16px;
-  color: yellow;
+button:hover {
+  color: aqua;
+  text-shadow: 0 0 10px black, 0 0 20px black;
 }
 
-.button1:active {
-  font-size: 16px;
-  color: red;
+.button1 {
+  width: 100%;
 }
 
 .button2 {
-  background-color: purple;
-  font-weight: bold;
-  color: white;
-  height: 35px;
   width: 49%;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin: 4px auto 0px;
-  cursor: pointer;
-}
-
-.button2:hover {
-  color: yellow;
 }
 
 .pakai {
   font-size: 100px;
   font-weight: bold;
-  color: red;
+  color: white;
+  text-shadow: 0 0 10px red;
 }
 
 @keyframes animation1 {
   from {
-    background-position: right;
+    background-position: left;
   }
 
   to {
-    background-position: left;
+    background-position: right;
   }
 }
