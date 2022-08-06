@@ -1,27 +1,20 @@
 body {
   background: black;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
 }
 
 .container1 {
-  background-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff);
-  background-size: 500%;
+  background-image: linear-gradient(to right, red, yellow, lime, aqua, blue);
+  background-size: 2000%;
   width: 99%;
   max-width: 400px;
-  border-radius: 5px;
   padding: 2px;
-  margin: auto;
-  animation: animation1 1s linear infinite alternate;
-}
-
-.div1 {
-  background-color: white;
-  background-image: linear-gradient(to bottom, red 25%, White 75%);
-  padding: 4px;
-  border: 1px solid black;
+  border: 2px solid white;
   border-radius: 5px;
+  margin: auto;
+  animation: animation1 20s linear infinite alternate;
 }
 
 h1 {
@@ -30,15 +23,49 @@ h1 {
 }
 
 .brand {
-  font-size: 35px;
-  color: red;
-  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white, 0 0 90px white;
+  font-size: 38px;
+  color: lime;
   margin: 8px auto;
+  text-shadow: 0 0 10px black, 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 40px lime, 0 0 50px lime;
 }
 
 p {
   font-size: 15px;
   margin: 4px auto;
+}
+
+.voucher {
+  font-weight: bold;
+  text-align: center;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 4px auto;
+}
+
+button {
+  background-color: lime;
+  font-weight: bold;
+  color: black;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 4px auto 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+}
+
+.button1 {
+  width: 100%;
+}
+
+.button2 {
+  width: 49%;
 }
 
 .iklan {
@@ -47,7 +74,7 @@ p {
   border: 2px solid black;
   border-radius: 5px;
   overflow: hidden;
-  margin: 50px auto;
+  margin: 4px auto;
   font-size: 15px;
 }
 
@@ -73,46 +100,10 @@ p {
   margin: auto;
 }
 
-.voucher {
-  font-weight: bold;
-  text-align: center;
-  height: 35px;
-  width: 100%;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin: 4px auto;
-}
-
-button {
-  background-image: linear-gradient(to bottom, red 25%, White 75%);
-  font-weight: bold;
-  color: black;
-  height: 35px;
-  width: 100%;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin: 4px auto 0px;
-  cursor: pointer;
-}
-
-button:hover {
-  color: aqua;
-  text-shadow: 0 0 10px black, 0 0 20px black;
-}
-
-.button1 {
-  width: 100%;
-}
-
-.button2 {
-  width: 49%;
-}
-
 .pakai {
+  color: lime;
   font-size: 100px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 0 10px white;
 }
 
 @keyframes animation1 {
