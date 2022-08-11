@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title id="title"></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/PrayTimes.js"></script>
+<style type="text/css"> 
+.blink { -webkit-animation: blink .99s linear infinite; 
+-moz-animation: blink .99s linear infinite; 
+-ms-animation: blink .99s linear infinite; 
+-o-animation: blink .99s linear infinite; 
+animation: blink .99s linear infinite; } @-webkit-keyframes blink { 0% { opacity: 1; } 50% { opacity: 1; } 50.01% { opacity: 0; } 100% { opacity: 0; } } @-moz-keyframes blink { 0% { opacity: 1; } 50% { opacity: 1; } 50.01% { opacity: 0; } 100% { opacity: 0; } } @-ms-keyframes blink { 0% { opacity: 1; } 50% { opacity: 1; } 50.01% { opacity: 0; } 100% { opacity: 0; } } @-o-keyframes blink { 0% { opacity: 1; } 50% { opacity: 1; } 50.01% { opacity: 0; } 100% { opacity: 0; } } @keyframes blink { 0% { opacity: 1; } 50% { opacity: 1; } 50.01% { opacity: 0; } 100% { opacity: 0; } } 
+
+</style>
+</head>
+
+<body>
+<center>
+$(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
+  
+  <script type="text/javascript" src="/md5.js"></script>
+  <script type="text/javascript">
+  <!--
+      function doLogin() {
+    document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    document.sendin.submit();
+    return false;
+      }
+  //-->
+  </script>
+$(endif)
+
+
+<div class="main">
+<div class="box"> 
+ 
+$(if error)<div class="notice">$(error)</div>$(endif)
+  $(if trial == 'yes')
+  $(endif)
+<p style="margin-top:-5px;margin-bottom:0px"></div>
+
+<div class="box">
+   </div>
+   <img lass="musradi" src="image/musradiah.gif" alt="Smiley face" height="25%" width="25%" >
+ <img lass="musradi" src="image/musradi.png" alt="Smiley face" height="100%" width="100%" >
+<div class="box" id="infologin" ></br>
+</div>
+  <form autocomplete="off" name="login" action="$(link-login-only)" method="post"
+    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+      <input type="hidden" name="dst" value="$(link-orig)" />
+      <input type="hidden" name="popup" value="true" /> 
+      <input class="username" name="username"type="text" value="$(username)"/>
+      <input class="password" name="password"placeholder="Password" type="hidden" />
+</br></br>
+<input type="image" src="image/musradibuton.png" alt="Submit" width="40%" height="40%"   type="submit" value="LOGIN" />
+ </br></br>
+<img class="musradi" src="image/musradi76.jpg" alt="Smiley face" height="790%" width="90%" > </br></br>
+
+ <a href="#popup"> <img src="image/musradi3.png" alt="Submit" width="60%" height="60%"</a>
+ </br></br>
+
+</br></br>
+ <img class="musradi" src="image/musradi4.png" alt="Smiley face" height="100%" width="100%" >
+<div id="closed"></div>
+
+<div id="popup">
+  <div class="popup-container">
+        <img lass="musradi" src="image/harga.png" alt="Smiley face" height="100%" width="100%" >
+
+         <a class="popup-close" href="#closed">X</a>
+
+   </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</center>
+<script type="text/javascript">
+
+
+document.getElementById('title').innerHTML = window.location.hostname + " > login";
+
+document.login.username.focus();
+
+var infologin = document.getElementById('infologin');
+infologin.innerHTML  = "Masukkan Sesuai Kode Voucher kemudian klik login";
+
+// login page 2 mode by Laksamadi Guko
+var username = document.login.username;
+var password = document.login.password;
+
+username.placeholder = "Kode Voucher";
+
+
+function harga(){
+  harga.display = "none";
+}
+
+// set password = username
+function setpass(){
+  var user = username.value   
+  password.value = user;
+}
+
+username.onkeyup = setpass; 
+
+// change to voucher mode
+function voucher(){
+  username.focus();
+  username.onkeyup = setpass;
+  username.placeholder = "Kode Voucher";
+  username.style = "border-radius:3px;"
+  password.type = "hidden";
+  infologin.innerHTML  = "Masukkan Kode Voucher kemudian klik login.";
+}
+
+// change to member mode
+function member(){
+  username.focus();
+  username.onkeyup = "";
+  username.placeholder = "Username";
+  username.style = "border-radius:3px 3px 0px 0px;"
+  password.type= "password";
+  infologin.innerHTML  = "Masukkan Username dan Password kemudian klik login.";
+}
+
+</script>
+
+</body>
+</html>

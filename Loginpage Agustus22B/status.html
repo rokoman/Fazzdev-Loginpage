@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+ <meta http-equiv="refresh" content="4; url= /> 
+<title id="title"></title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/PrayTimes.js"></script>
+<style type="text/css"> </style>
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</script>
+		<style>
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+</style>
+</head>
+<body $(if advert-pending == 'yes')	onLoad="openAdvert()" $(endif) >
+<div class="main">
+
+<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+<p style="color:#fff;font-size:12px; text-align:center;margin-top:-15px;margin-bottom:5px">
+$(if login-by == 'trial')
+	<br><div style="text-align: center;">Welcome trial user!</div><br> Gunakan voucher akses lebih cepat dan unlimited<br>
+$(elif login-by != 'mac') 
+	<br><div style="text-align: center;">Anda sudah terhubung ke Internet <br>Terimakasih sudah berlangganan internet kami</div><br>
+$(endif)<center><img lass="musradi" src="image/musradivdie.gif" alt="Smiley face" height="30%" width="30%" >
+<img lass="musradi" src="image/musradi2.png" alt="Smiley face" height="100%" width="100%" ></center>
+</br></br>
+	<p style="color:#fff;font-size:12px; text-align:center;margin-top:-15px;margin-bottom:5px">
+<center><table class="table2">
+    <tr><td  style="color:#fff;font-size:12px width: 40%;"><center>Kode voucher - <b style="color:#ccff00;font-size:12px" id="user"> $(username)</center></td></tr>
+	
+</table></center>
+$(if login-by-mac != 'yes')
+
+<!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+<button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+<!-- end of user manager link -->
+</br>
+<input class="btn btn-in btn-bl musradi" type="submit" value="LOGOUT">
+
+$(endif)
+</form>
+
+</br></br>
+
+<div>
+<p style="color:#fff;font-size:11px; text-align:center;margin-top:5px;margin-bottom:-18px">
+ Gunakan Internet dengan Bijaksana
+</div>
+</div>
+<p style=" text-align:center;margin-top:10px;margin-bottom:5px">
+<div class="box" style="color:#fff";>
+ <i>Copyright &copy; 09.NET</i><br />
+</center>
+
+<script type="text/javascript">
+	document.getElementById('title').innerHTML = window.location.hostname + " > status";
+//get vaidity
+    var usr = document.getElementById('user').innerHTML
+    var url = "https://xxx.mikhmon.online/status/status.php?name="; // http://ip-server-mikhmon/mikhmonv2/status/status.php?name=
+    var SessionName = "mks"
+    var getvalid = url+usr+"&session="+SessionName
+    document.getElementById('exp').src = getvalid;		
+</script>
+<script type="text/javascript">
+  document.getElementById('title').innerHTML = window.location.hostname + " > redirect";
+
+
+    function startClock() {
+        $(if popup == 'true')
+        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+    $(endif)
+    location.href = 'www.google.com';
+    }
+</script>
+</body>
+</html>

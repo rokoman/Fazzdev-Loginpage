@@ -1,0 +1,74 @@
+
+#Date{margin:10px;font-size:12px;text-align:center}
+#jam-kanan{margin:2px;display:table-cell}
+.wiget-sholat{width:auto;overflow:hidden;background-color:rgba(51,51,51,0.4);border:1px solid #57aaff;margin:0 auto;border-radius:5px}
+.widget-sholat-container{width:100%;padding:0;margin:0;float:left;overflow:hidden}
+.widget-sholat-container .head{height:60px;width:100%;float:left;padding-left:5px;padding-top:3px;position:relative}
+.widget-sholat-container .head .logo{height:35px;width:35px;display:block;margin-right:3px;margin-top:10px;left:10px;position:absolute}
+.widget-sholat-container .head .title{color:#ff9c00;overflow:hidden;padding-top:5px;display:table;margin:4px auto;text-align:center;padding-left:5px}
+.widget-sholat-container .head .title .sub{color:#fff;font-size:10px;letter-spacing:.5px;font-weight:400;padding-top:2px}
+.widget-sholat-container .head .title h3{color:#4fc4f6;font-size:18px;line-height:5px;font-weight:700}
+.widget-sholat-container .id-container{background:#01256f;width:100%;padding-left:4%;overflow:hidden;color:#fff;font-size:11px;border-top:1px solid #333;text-align:left;padding-bottom:5px;border-bottom:1px solid #333}
+.widget-sholat-container .id-container .title{width:100%;line-height:11px;overflow:hidden;position:relative;margin:0 5px 0 0}
+.widget-sholat-container .id-container .title .desc{font-size:12px;width:25%;text-transform:uppercase;padding:3px 5px 0 0;float:left;display:inline}
+.widget-sholat-container .id-container .title .ket{font-size:11px;font-weight:700;padding:3px 5px 0 0;float:left;display:inline}
+.widget-sholat-container .id-container .title .nilai{font-size:12px;padding:3px 5px 0 0;float:left;display:inline}
+.widget-sholat-container .foot{color:#fff;height:auto;width:100%;float:left;margin:0;overflow:hidden;position:relative;padding-top:3px;padding-bottom:5px;font-size:10px}
+.widget-sholat-container .foot .subfoot{display:table;text-align:center;margin:0 auto}
+.widget-sholat-container .waktu-container{padding:0;width:100%;overflow:hidden}
+.widget-sholat-container .waktu-container .waktu{background:rgba(145, 215, 217, 0.31);width:100%;height:20px;overflow:hidden;position:relative;margin:0 10px 0 0;border-bottom:1px solid #333;text-align:left;padding:0}
+.widget-sholat-container .waktu-container .waktu .title{color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;background:rgba(145, 215, 217, 0.31);float:left;width:40%;padding:1px 0 2px 10px;margin:0 auto}
+.widget-sholat-container .waktu-container .waktu .pukul{color:#fff;font-size:12px;font-weight:700;text-align:center;line-height:17px;text-shadow:1px 0 0 #333}
+.toggle-jadwal{position:absolute;top:40px;right:10px;font-size:12px;width:40px;height:20px;margin:0 auto;padding:0;cursor:pointer;border-radius:3px;color:#fff;border:none}
+.Show{display:none}
+.waktu-container,.id-container{display:none}
+.merahmuda{background:#e86459}
+.birumuda{background:#4fc4f6}
+.img-responsive{width:100%;height:auto;margin:10px auto}
+.modal{display:none;opacity:0;position:fixed;z-index:1;padding-top:15%;left:0;top:0;width:100%;height:100%;overflow:hidden;background-color:#000;background-color:rgba(0,0,0,0.4);transition:all .3s}
+.modal-content{background-color:#fff;margin:0 auto;padding:5px;border:1px solid #ddd;border-radius:2px;max-width:400px;display:table;text-align:center}
+.modal-content h1{font-size:.9rem;margin:0 auto;color:#333}
+.close{color:red;font-weight:700;font-size:1rem;cursor:pointer;background:transparent;border:none;margin-top:-10px;padding:5px}
+.close:hover,.close:focus{color:#333;text-decoration:none;cursor:pointer}
+.close{transition:all .3s}
+.countdown-wrapp{margin:10px 10px 2px;padding:10px 10px 5px;max-width:400px;border:1px dashed #fff}
+.countdown-wrapp h4{color:#fff;font-size:14px;margin:0 auto;margin-top:-20px;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;text-shadow:2px 0 0 #333}
+.countdown-wrapp span{background:#0142ab;padding:1px 5px}
+.countdown-inner{position:relative;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;height:auto;width:100%;background-color:transparent;border-radius:3px;box-shadow:none}
+.clock-column{margin-right:10px;text-align:center;position:relative;width:15%}
+.clock-column::after{content:':';display:block;height:.25rem;width:.25rem;font-size:36px;font-weight:200;color:#fff;position:absolute;top:-8px;right:-5px;-moz-animation:mymove 1s ease infinite;-webkit-animation:mymove 1s ease infinite}
+@-webkit-keyframes mymove {
+0%{opacity:1;text-shadow:0 0 20px #00c6ff}
+50%{opacity:0;text-shadow:none}
+100%{opacity:1;text-shadow:0 0 20px #00c6ff}
+}
+@-moz-keyframes mymove {
+0%{opacity:1;text-shadow:0 0 20px #00c6ff}
+50%{opacity:0;text-shadow:none}
+100%{opacity:1;text-shadow:0 0 20px #00c6ff}
+}
+.clock-column:last-child::after{display:none}
+.clock-column:last-child{margin-right:0}
+.clock-label{text-transform:uppercase;color:#fff;font-size:12px;font-weight:700;text-align:center;margin:0 auto;margin-top:5px;padding-top:5px;text-shadow:0 0 20px #48C8FF}
+.Bhari{border-top:2px solid red}
+.Bjam{border-top:2px solid #FF0}
+.Bmenit{border-top:2px solid #0F0}
+.Bdetik{border-top:2px solid #4fc4f6}
+.clock-timer{color:#fff;font-size:14px;font-weight:700;line-height:1;margin:0 auto}
+.paket-voucher{text-align:center;padding:5px;font-size:.8rem;margin:5px auto}
+.paket-voucher h3{font-size:.8rem}
+.stats{border:1px solid #57aaff;overflow:auto;padding:5px;margin-top:-1px;font-size:14px;color:#fff;font-weight:600;border-radius:5px;text-shadow:0 0 0 #333}
+.stats strong{display:block;font-size:11px;font-weight:700}
+.stats div{border-right:1px solid #57aaff;width:33.33333%;float:left;text-align:center}
+.stats div:nth-of-type(3){border:none}
+.beli-voucher{border-radius:10px;height:25px;width:70%;display:inline-block;padding:4px;text-shadow:none}
+@media only screen and (max-width: 414px) {
+.modal-content{margin:0 5px}
+.waktu-container li{width:auto}
+}
+@media only screen and (max-width: 767px) {
+.box-wrapp{background:url(../img/bg-full.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
+}
+@media (min-width: 768px) {
+.bg-home{background:url(../img/bg-full.jpg) no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-color:#212E36}
+}
