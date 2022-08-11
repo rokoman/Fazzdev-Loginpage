@@ -7,14 +7,14 @@ body {
 
 .container1 {
   background-image: linear-gradient(to right, red, yellow, lime, aqua, blue);
-  background-size: 2000%;
+  background-size: 1000%;
   width: 99%;
   max-width: 400px;
   padding: 2px;
   border: 2px solid white;
   border-radius: 5px;
   margin: auto;
-  animation: animation1 20s linear infinite alternate;
+  animation: animation1 10s linear infinite alternate;
 }
 
 h1 {
@@ -24,9 +24,9 @@ h1 {
 
 .brand {
   font-size: 38px;
-  color: lime;
+  color: aqua;
   margin: 8px auto;
-  text-shadow: 0 0 10px black, 0 0 20px lime, 0 0 30px lime, 0 0 40px lime, 0 0 40px lime, 0 0 50px lime;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
 }
 
 p {
@@ -101,9 +101,9 @@ button:hover {
 }
 
 .pakai {
-  color: lime;
+  color: yellow;
   font-size: 100px;
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px black;
 }
 
 @keyframes animation1 {
