@@ -68,38 +68,6 @@ button:hover {
   width: 49%;
 }
 
-.iklan {
-  width: 99%;
-  height: 200px;
-  border: 2px solid black;
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 4px auto;
-  font-size: 15px;
-}
-
-.merah {
-  background-color: red;
-  color: white;
-  height: 100px;
-  display: flex;
-}
-
-.merah p {
-  margin: auto;
-}
-
-.putih {
-  background-color: white;
-  color: red;
-  height: 100px;
-  display: flex;
-}
-
-.putih p {
-  margin: auto;
-}
-
 .pakai {
   color: yellow;
   font-size: 100px;
